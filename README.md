@@ -3,6 +3,9 @@ tornado_app_squeleton
 
 # How to use ?
 
-To launch : python main.py --logging=debug.
+To launch :
 
-To naviguate : localhost:8082/ you should see "Using Tornado_app_squeleton".
+* **logging info mode** ```bash python main.py```
+* **logging debug mode** ```bash python main.py --logging=debug```
+
+To naviguate : http://localhost:8082/ you should see "Using Tornado_app_squeleton".
