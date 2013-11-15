@@ -12,7 +12,9 @@ import traceback
 import torndb
 import logging
 
+
 ##internal imports
+# from tornadoHelper.url import Url
 from myApp.app import MyApplication
 from myApp1.app import MyApplication1
 
@@ -40,8 +42,10 @@ def main():
         """
         http_server = tornado.httpserver.HTTPServer(app)
         http_server.listen(options.port)
+
         http_server1 = tornado.httpserver.HTTPServer(app1)
         http_server1.listen(options.port1)
+        
         ioloop = tornado.ioloop.IOLoop.instance()
         tornado.autoreload.add_reload_hook(app.reloadTasks)
         tornado.autoreload.add_reload_hook(app1.reloadTasks)

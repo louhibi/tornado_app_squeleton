@@ -11,13 +11,14 @@ class ExtentedApplication(Application):
     
     handlers = [] 
 
-    def __init__(self, urls, settings):        
+    def __init__(self, handlers, settings):        
         ## The settings of the application debug,logging,gzip
         try:
             logging.info("Starting application")
-            logging.debug("urls %s" % str(urls))
-            self.handlers.extend(urls)
-            super(ExtentedApplication, self).__init__(self.handlers, **settings)
+            # logging.debug("urls %s" % str(urls))
+            # self.handlers.extend(urls)
+            super(ExtentedApplication, self).__init__(handlers, **settings)
+            # super(ExtentedApplication, self).__init__([], **settings)
         except:
             print traceback.format_exc()
 

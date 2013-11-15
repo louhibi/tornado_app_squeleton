@@ -14,4 +14,4 @@ class MainHandler(BaseHandler):
 @Url("/", name='index')
 class indexHandler(MainHandler):
     def get(self):
-        self.write("Using Tornado_app_squeleton")
+        self.write("Using Tornado_app_squeleton 1")
